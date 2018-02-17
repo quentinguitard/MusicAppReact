@@ -1,6 +1,6 @@
 <?php
 require_once("controllers/Controller.php");
-require_once("models/GetAlbums.php");
+require_once("/models/GetAlbums.php");
 class Albums extends Controller
 {
 	public function listing($bdd)
