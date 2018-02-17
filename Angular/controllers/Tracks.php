@@ -1,6 +1,6 @@
 <?php
 require_once("controllers/Controller.php");
-require_once("models/GetTracks.php");
+require_once("/models/GetTracks.php");
 class Tracks extends Controller
 {
 	public function detail($bdd)
