@@ -5,11 +5,8 @@ class Genres extends Controller
 {
 	public function list($bdd)
 	{
-		$list = new GetGenres($_SESSION['mail']);
-	}	
-	public function detail($bdd)
-	{		
-		$detail = new GetGenres($_SESSION['mail']);
+		$list = new GetGenres($bdd);
+		var_dump($list->getGenre());
 	}	
 }
 ?>
