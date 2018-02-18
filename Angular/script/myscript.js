@@ -34,7 +34,37 @@ mymodule.controller('detailAlbums', ['$scope', '$http','$sce', function ($scope,
     console.log(error)
   });
 }]);
-
+mymodule.controller('listGenre', ['$scope', '$http','$sce', function ($scope, $http,$sce,$rootScope) {
+  $scope.listMyInformation = [];
+  $scope.getAlbum = function(id) {
+    localStorage.setItem("idGenre", id);
+  };  
+   $http({
+    method: "post",
+    url: 'getJson/listGenre.php'
+  }).then(function (success){
+    console.log(success.data)
+    $scope.listMyInformation = success.data;
+  },function (error){
+    console.log(error)
+  });
+}]);
+mymodule.controller('detailGenre', ['$scope', '$http','$sce', function ($scope, $http,$sce,$rootScope) {
+ $scope.listMyInformation = [];
+   $http({
+    method: "post",
+    url: 'getJson/detailGenre.php',
+    data: {
+        id: localStorage.getItem("idGenre")
+    },
+     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+  }).then(function (success){
+    console.log(success.data)
+    $scope.listMyInformation = success.data;
+  },function (error){
+    console.log(error)
+  });
+}]);
 mymodule.controller('listArtist', ['$scope', '$http','$sce', function ($scope, $http,$sce,$rootScope) {
   $scope.listMyInformation = [];
    $scope.getAlbum = function(id) {

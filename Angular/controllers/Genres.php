@@ -2,10 +2,13 @@
 require_once("controllers/Controller.php");
 class Genres extends Controller
 {
-	public function list($bdd)
+	public function listing()
 	{
-		//$list = new GetGenres($bdd);
-		//var_dump($list->getGenre());
+		return $this -> view("listGenre");
+	}	
+	public function detail()
+	{
+		return $this -> view("detailGenre");
 	}	
 }
 ?>
