@@ -1,12 +1,12 @@
 <?php
 class GetAlbums
 { 
-	public function getList($bdd)
+	public function getList($bdd,$offset,$pageSize)
 	{
-		if($reponse = $bdd->query("SELECT * FROM albums"))
+		if($reponse = $bdd->query("SELECT * FROM albums LIMIT $offset,$pageSize"))
 		{
 			if( $row = $reponse->fetchall(PDO::FETCH_ASSOC))
-		 		return json_encode($row);
+		 		return $row;
 		}
 	}
 	public function getDetail($bdd,$id)
@@ -20,7 +20,7 @@ class GetAlbums
 					return json_encode($row);
 				}
 			}
-		}
+		} 
 		catch (Exception $e)
 		{
 		    die('Erreur : ' . $e->getMessage());

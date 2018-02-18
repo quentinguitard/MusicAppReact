@@ -7,17 +7,20 @@
     <script src="script/myscript.js"></script>
   </head>
   <body>
-    <div ng-controller="listAlbums">
+    <div ng-controller="detailTrack">
       <div ng-repeat="data in listMyInformation">
+        <div>
+          <div>{{data['name']}}</div>
+          <div>{{data["track_no"]}}</div>
+          <div>{{data["bio"]}}</div>
+          <div><img src="{{data['cover_small']}}" /></div>
           <div>
-            <div> {{data["name"]}}</div>
-            <div><a href="index?controller=albums&action=detail"  ng-click="getAlbum(data['id'])"><img src="{{data['cover_small']}}" /></a></div>
-            <div>{{data["description"]}}</div>
-            <div>{{data["popularity"]}}</div>
-            <div>{{data["release_date"]}}</div>
+            <button ng-click="playAudio(data['mp3'])">play</button>
+            <button ng-click="stopAudio(data['mp3'])">stop</button>
+            <button ng-click="pauseAudio(data['mp3'])">pause</button>
           </div>
         </div>
-      </div>     
-    </div>    
+      </div>  
+    </div>  
   </body>
 </html>
