@@ -9,7 +9,7 @@ class GetGenres
     public function getGenre(){
     	$sql = "SELECT * FROM genres";
     	$stmt = $this->query($sql);
-    	$row = $stmt->fetchAll(PDO::FETCH_CLASS, "genre");
+    	$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     	$json = json_encode($row);
     	return $json;
     }
