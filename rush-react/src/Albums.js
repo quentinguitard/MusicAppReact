@@ -11,7 +11,6 @@ export default class Albums extends Component {
   }
 
   componentWillMount(){
-    console.log('hole')
     fetch("http://localhost/Projet-Web_Rush_2/React/controllers/GetAlbum.php")
       .then(response=>{ return response.json()})
       .then(responseJson=>{

@@ -13,6 +13,7 @@ export default class Album extends Component {
 
   componentWillMount(){
     const albumId = this.props.match.params.id
+    console.log(albumId);
     fetch(`http://localhost/Projet-Web_Rush_2/React/controllers/GetTracks.php?id=${albumId}`)
       .then(response=>{ return response.json()})
       .then(responseJson=>{
@@ -27,7 +28,8 @@ export default class Album extends Component {
     return (
       <div>
       {this.state.tracks.map(track => 
-        <div>{track.name}</div>
+        <div key={track.id}>{track.name}</div>
+
         )}
       </div>
       )

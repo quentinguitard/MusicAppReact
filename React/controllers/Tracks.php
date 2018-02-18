@@ -6,7 +6,7 @@ class Tracks extends Controller
 	public function detail($bdd)
 	{		
 		$detail = new GetTracks();
-		var_dump($detail->getTracks(1));
+		var_dump($detail->getTracks($_GET['id']));
 	}	
 }
 ?>

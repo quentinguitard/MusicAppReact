@@ -12,12 +12,10 @@ export default class App extends Component {
     return (
 
       <Router>
-
-      <Route path="/albums"component={Albums} />
-       <Route path="/albums/:id" component={Album} />
-      
-
-
+        <div>
+          <Route exact={true} path="/albums" component={Albums} />
+          <Route path="/albums/:id" component={Album} />
+        </div>
       </Router>
 
 
