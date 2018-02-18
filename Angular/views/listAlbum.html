@@ -4,9 +4,19 @@
     <link rel="stylesheet" href="style/mystyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-    <script src="../script/my_script.js"></script>
+    <script src="script/myscript.js"></script>
   </head>
   <body>
+    <div class="container">
+    <div id="header">
+        <div class="logo"><a href="#"><img src="images/logo.jpg" alt="" /></a></div>
+       <ul class="site-nav">
+          <li><a href="index?" class="act">Home</a></li>
+          <li><a href="index?controller=albums&action=listing">Albums</a></li>
+          <li><a href="index?controller=artists&action=listing">Artists</a></li>
+          <li><a href="index?controller=Genres&action=listing">Genres</a></li>
+        </ul>
+      </div>
     <div ng-controller="listAlbums">
       <div ng-repeat="data in listMyInformation">
           <div>
@@ -18,12 +28,7 @@
           </div>
         </div>
       </div>     
-        <div>
-          <ul ng-repeat="number in li">
-            <li ><a href='#'>{{number}}</a></li>
-          </ul>
-        </div>       
+    </div>    
     </div>    
   </body>
 </html>
- 

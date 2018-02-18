@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once('db.php');
-$_controller = isset($_GET['controller']) ? $_GET['controller'] : 'SignUP';
-$_action = isset($_GET['action']) ? $_GET['action'] : 'show';
+$_controller = isset($_GET['controller']) ? $_GET['controller'] : 'home';
+$_action = isset($_GET['action']) ? $_GET['action'] : 'index';
 $controller_name = ucfirst($_controller);
 if(file_exists("controllers/".$controller_name.".php"))
 {

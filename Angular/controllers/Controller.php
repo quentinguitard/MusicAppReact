@@ -4,7 +4,7 @@ class Controller
 	protected function view($view,$param = [])
 	{
 		extract($param);
-		require_once("views/$view.php");
+		require_once("views/$view.html");
 	}
 }
 ?>

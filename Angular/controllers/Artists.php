@@ -2,13 +2,12 @@
 require_once("controllers/Controller.php");
 class Artists extends Controller
 {
-	public function listing($bdd)
+	public function listing()
 	{
 		return $this -> view("listArtist");
 	}	
-	public function detail($bdd)
+	public function detail()
 	{		
-		//$detail = new GetArtists($bdd);
 		return $this -> view("detailArtist");
 	}		
 }
