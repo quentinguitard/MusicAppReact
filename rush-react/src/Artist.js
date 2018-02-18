@@ -35,10 +35,10 @@ export default class Artist extends Component {
           </div>
           <div className="col-3 d-flex align-items-center">
               <h3>
-               <Link to={`../albums/${artist.id}`}>{artist.name}</Link>
+               <Link to={`../albums/${artist.id}`}>{artist.albumName}</Link>
               </h3>
           </div>
-          <div className="col-7"><p>{artist.description}</p></div>
+          <div className="col-7"><p>{artist.albumDesc}</p></div>
         </div>
 
         )}
