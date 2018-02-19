@@ -7,6 +7,7 @@
     <script src="script/myscript.js"></script>
   </head>
   <body>
+    <div class="container">
     <div id="header">
       <div class="logo"><a href="#"><img src="images/logo.jpg" alt="" /></a></div>
        <ul class="site-nav">
@@ -15,8 +16,7 @@
           <li><a href="index?controller=artists&action=listing">Artists</a></li>
           <li><a href="index?controller=Genres&action=listing">Genres</a></li>
         </ul>
-      </div>
-    <div class="container">
+      </div>    
     <div ng-controller="detailGenre">
       <div ng-repeat="data in listMyInformation">
         <div>
