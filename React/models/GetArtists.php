@@ -8,8 +8,8 @@ class GetArtists
     	$this->bdd = $bdd;
     }
 
-    public function selectArtist($artists = ""){
-    	$sql = "SELECT * FROM artists WHERE name LIKE '%".$artists."%'";
+    public function selectArtist(){
+    	$sql = "SELECT * FROM artists";
     	$stmt = $this->bdd->query($sql);
     	$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     	$json = json_encode($row);
@@ -17,8 +17,8 @@ class GetArtists
     }
 
     public function getAlbums($idArtists){
-    	$sql = "SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id WHERE artists.id =" . $idArtists;
-    	var_dump($sql);
+    	$sql = "SELECT albums.id, albums.name as 'albumName', albums.cover, albums.cover_small, albums.description as 'albumDesc' FROM albums JOIN artists ON albums.artist_id = artists.id WHERE artists.id =" . $idArtists;
+    
     	$stmt = $this->bdd->query($sql);
     	$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     	$json = json_encode($row);
