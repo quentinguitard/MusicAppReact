@@ -8,8 +8,8 @@ class GetArtists
     	$this->bdd = $bdd;
     }
 
-    public function selectArtist($artists = "",$offset,$pageSize){
-    	$sql = "SELECT * FROM artists WHERE name LIKE '%".$artists."%' LIMIT $offset,$pageSize";
+    public function selectArtist($artists = ""){
+    	$sql = "SELECT * FROM artists WHERE name LIKE '%".$artists."%'";
     	$stmt = $this->bdd->query($sql);
     	$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     	$json = json_encode($row);

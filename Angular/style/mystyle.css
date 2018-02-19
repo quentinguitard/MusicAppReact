@@ -1,6 +1,6 @@
 * {margin:0;padding:0}
 html {min-width:1000px}
-body {background:url(images/tail-cont.gif) repeat center top #f2c142;font-family:Tahoma, Arial, helvetica, sans-serif;font-size:100%;line-height:1em;color:#000;min-width:1000px}
+body {background:url(../images/tail-cont.gif) repeat center top #f2c142;font-family:Tahoma, Arial, helvetica, sans-serif;font-size:100%;line-height:1em;color:#000;min-width:1000px}
 input, textarea, select {font-family:Tahoma, Arial, helvetica, sans-serif;font-size:1em}
 input, select {vertical-align:middle;font-weight:normal}
 img {border:0;vertical-align:top;text-align:left}
@@ -17,9 +17,9 @@ object {vertical-align:top;outline:none}
 .aligncenter {text-align:center}
 .wrapper {width:100%;overflow:hidden}
 p {margin:0;padding:0}
-.tail-top {background:url(images/tail-top.gif) center top repeat-x}
-.tail-top-left {height:161px;position:absolute;left:0;top:0;width:50%;background:url(images/tail-top-left.gif) repeat-x left top}
-.tail-bottom {background:url(images/tail-bottom.png) left bottom repeat-x}
+.tail-top {background:url(../images/tail-top.gif) center top repeat-x}
+.tail-top-left {height:161px;position:absolute;left:0;top:0;width:50%;background:url(../images/tail-top-left.gif) repeat-x left top}
+.tail-bottom {background:url(../images/tail-bottom.png) left bottom repeat-x}
 /* forms */
 #contacts-form {clear:right;width:100%;overflow:hidden;padding:15px 0 0 0}
 #contacts-form fieldset {border:none;float:left;}
