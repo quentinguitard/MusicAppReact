@@ -3,7 +3,7 @@ class GetAlbums
 { 
 	public function getList($bdd,$offset,$pageSize)
 	{
-		if($reponse = $bdd->query("SELECT * FROM albums LIMIT $offset,$pageSize"))
+		if($reponse = $bdd->query("SELECT id,artist_id,name,description,cover,cover_small,DATE_FORMAT(FROM_UNIXTIME(release_date),'%d-%m-%Y') as \"release_date\",popularity FROM albums LIMIT $offset,$pageSize"))
 		{
 			if( $row = $reponse->fetchall(PDO::FETCH_ASSOC))
 		 		return $row;

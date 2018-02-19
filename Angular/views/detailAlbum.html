@@ -9,14 +9,13 @@
   <body>
     <div class="container">
     <div ng-controller="detailAlbums">
-      <div ng-repeat="data in listMyInformation">
-        <div>
+       <div><img src="{{listMyInformation[0]['Cover']}}" /></div>
+          <div>{{listMyInformation[0]['Name']}}</div>
+          <div>{{listMyInformation[0]['Genre']}}</div>
+          <div>{{listMyInformation[1]['Genre']}}</div>
+          <div>{{listMyInformation["Popularity"]}}</div>
+      <div ng-repeat="data in listMyInformation">        
           <div><a href="index?controller=tracks&action=detail"  ng-click="getAlbum(data['Number'])">{{data['Number']}}</a></div>
-          <div><img src="{{data['Cover']}}" /></div>
-          <div>{{data["Genre"]}}</div>
-          <div>{{data["Popularity"]}}</div>
-          <div>{{data["Release date"]}}</div>
-          </div>
         </div>
     </div>  
   </div>
